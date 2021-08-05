@@ -23,7 +23,7 @@ app.task_id = 0
 def generate_file():
     """
     Generates a 2MB file conatining random objects
-    :return:
+    :return: json response with status code
     """
     try:
         unique_id = ( str(time.time()) + str(uuid.uuid4())).replace('-', '').replace('.', '')[0:20] # 20 characters unique id with time stamp
@@ -53,8 +53,13 @@ def generate_file():
 
 @app.route('/download/<path:file_path>')
 def download_file(file_path):
+    """
+    Downloads the file with path mentioned
+    :param file_path: relative path of generated file
+    :return: json response with status code
+    """
     try:
-        print("FILE PATH:" + str(file_path))
+        print("file path:" + str(file_path))
         return send_file(file_path, as_attachment=True)
     except Exception as e:
         print(e)
@@ -67,6 +72,11 @@ def download_file(file_path):
 
 @app.route('/stats/<path:file_path>')
 def get_file_stats(file_path):
+    """
+    generates states for file
+    :param file_path: relative path of file
+    :return: json response with status code
+    """
     try:
         file_abs_path = root_dir + "/" + file_path
         stats = None

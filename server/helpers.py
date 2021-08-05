@@ -2,6 +2,14 @@ import random, string
 
 
 def generate_random_object():
+    """
+    Generates a random object from one of the following types:
+    - Alphabet
+    - Alphanumeric
+    - Integers
+    - Real Numbers
+    :return: A random object
+    """
     object_size = random.randint(1, 20)
     objects = [
         ''.join(random.choices(string.ascii_letters + string.digits, k=object_size)),  # alphanumeric
@@ -13,6 +21,11 @@ def generate_random_object():
 
 
 def get_stats(arr):
+    """
+    Generates stats of input array
+    :param arr: Array containg random objects
+    :return: Dictionary containing stats
+    """
     stats = {
         'alphabets': 0,
         'real_numbers': 0,
