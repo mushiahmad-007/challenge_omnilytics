@@ -1,6 +1,7 @@
 # challenge_omnilytics
-It contains solution to a challenge sent as an assignment.
+It contains solution to a challenge sent as an assignment.  
 
+This project is deployed at a temporary Google Cloud Instance.  
 You can see live demo at : http://35.233.160.210:3000  
 
 
