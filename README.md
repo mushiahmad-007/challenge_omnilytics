@@ -1,7 +1,7 @@
 # challenge_omnilytics
 It contains solution to a challenge sent as an assignment.
 
-You can see live demo at 
+You can see live demo at : http://35.233.160.210:3000  
 
 
 # How to setup Client:
