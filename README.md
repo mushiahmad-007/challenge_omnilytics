@@ -5,15 +5,15 @@ You can see live demo at
 
 
 # How to setup Client:
-- Install node and npm
-    you can follow this guide to install: https://nodejs.dev/learn/how-to-install-nodejs
+- Install node and npm  
+    you can follow this guide to install: https://nodejs.dev/learn/how-to-install-nodejs  
 
-- Go to root directory and install dependencies:
-&nbsp;$ npm install
+- Go to root directory and install dependencies:  
+    $ npm install  
 
-- Run react app
-    $ npm start
-    
+- Run react app  
+    $ npm start  
+
 
 
 # How to setup Server:
@@ -23,11 +23,10 @@ You can see live demo at
     $ python3 -m venv venv  
     $ source venv/bin/activate  
 
-- Install requirements
-    $ pip install -r requirements.txt
+- Install requirements  
+    $ pip install -r requirements.txt  
 
-- Go to root directory and run app
+- Go to root directory and run app  
     $ python app.py
-
 
 
