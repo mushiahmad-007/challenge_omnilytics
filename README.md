@@ -9,7 +9,7 @@ You can see live demo at
     you can follow this guide to install: https://nodejs.dev/learn/how-to-install-nodejs
 
 - Go to root directory and install dependencies:
-    $ npm install
+&nbsp;$ npm install
 
 - Run react app
     $ npm start
