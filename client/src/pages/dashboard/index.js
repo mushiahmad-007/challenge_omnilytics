@@ -5,35 +5,15 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import {generateFile, getFileStats} from '../../api/fileHandling'
+import {useStyles} from './style'
 const defaultProps = {
   bgcolor: "background.paper",
   m: 1,
   border: 1,
   style: { width: "45%", height: "100%", paddingBottom: "6%" }
 };
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: theme.spacing(7),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
-  },
-  form: {
-    width: "100%", // Fix IE 11 issue.
-    marginTop: theme.spacing(7)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2)
-  }
-}));
 
 function FileHandling() {
   const classes = useStyles();
@@ -44,10 +24,6 @@ function FileHandling() {
   const [fileGenerated, setFileGenerated] = useState(false);
   const [reportLoading, setReportLoading] = useState(false);
 
-
-  useEffect(() => {
-      
-  }, [])
   const _handleFileGeneration = () => {
     setIsLoading(true);
     setFileStats('');
@@ -57,7 +33,6 @@ function FileHandling() {
         setFileStatsLink(res.data.stats_link)
         setIsLoading(false);
         setFileGenerated(true);
-        
     })
   }
   const _handleFileStats = () => {
