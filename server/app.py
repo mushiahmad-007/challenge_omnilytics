@@ -14,6 +14,7 @@ sys.path.append(root_dir)
 
 from helpers import get_stats, generate_random_object
 from config import server
+
 app = Flask(__name__)
 CORS(app)
 app.task_id = 0
@@ -26,8 +27,9 @@ def generate_file():
     :return: json response with status code
     """
     try:
-        unique_id = ( str(time.time()) + str(uuid.uuid4())).replace('-', '').replace('.', '')[0:20] # 20 characters unique id with time stamp
-        file_name = 'file_{}.txt'.format(unique_id) # file name containing unique id
+        unique_id = (str(time.time()) + str(uuid.uuid4())).replace('-', '').replace('.', '')[
+                    0:20]  # 20 characters unique id with time stamp
+        file_name = 'file_{}.txt'.format(unique_id)  # file name containing unique id
         file_uri = '/files/' + file_name
         file_abs_path = root_dir + file_uri
         with open(file_abs_path, 'w') as f:
@@ -48,7 +50,6 @@ def generate_file():
             "message": "INTERNAL_SERVER_ERROR",
         }
         return app.response_class(response=json.dumps(response), mimetype='application/json'), 500
-
 
 
 @app.route('/download/<path:file_path>')
