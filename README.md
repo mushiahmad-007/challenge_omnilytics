@@ -18,10 +18,10 @@ You can see live demo at
 
 # How to setup Server:
 
-- Create venv for Python3
-    $ sudo apt-get install python3-venv
-    $ python3 -m venv venv
-    $ source venv/bin/activate
+- Create venv for Python3  
+    $ sudo apt-get install python3-venv  
+    $ python3 -m venv venv  
+    $ source venv/bin/activate  
 
 - Install requirements
     $ pip install -r requirements.txt
